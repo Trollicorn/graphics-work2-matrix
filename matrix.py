@@ -40,6 +40,11 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
+    cols = len(m2)
+    rows = len(m1)
+    for r in range(cols):
+        for c in range(rows):
+
     pass
 
 
