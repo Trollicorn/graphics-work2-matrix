@@ -18,7 +18,7 @@ def print_matrix( matrix ):
     for c in matrix:
         for r in range(len(c)):
             #print(str(c[r]))
-            bucket[r] += str(c[r])
+            bucket[r] += str(c[r]) + " "
     for i in range(len(bucket)):
         print(bucket[i])
 
@@ -39,12 +39,20 @@ def ident( matrix ):
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
+#ASSUMING SQUARE MATRIX
 def matrix_mult( m1, m2 ):
     cols = len(m2)
     rows = len(m1)
-    for r in range(cols):
-        for c in range(rows):
-
+    temp = []
+    for r in range(rows):
+		temp.append(0)
+    for c in range(cols):
+        for r in range(rows):
+			temp[r] = m2[c][r]
+        for r in range(rows):
+            m2[c][r] = 0
+            for i in range(rows):
+                m2[c][r]+= temp[r] * m1[r][i]
     pass
 
 
