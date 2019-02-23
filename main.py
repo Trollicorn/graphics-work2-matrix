@@ -14,13 +14,13 @@ ident(matrix)
 
 print_matrix(matrix)
 """
-m0 = [ [1,4,7],[2,5,8],[3,6,9]]
-m1 = [ [4,10,3],[12,5,6],[7,8,1]]
+m0 = [ [1,2,3,1], [4,5,6,1], [7,8,9,1], [10,11,12,1] ]
+m1 = [ [1,2,3,1], [4,5,6,1] ]
 print_matrix(m0)
 print("\n")
 print_matrix(m1)
 print("\n")
-matrix_mult(m1,m0)
+matrix_mult(m0,m1)
 print_matrix(m1)
 print("\n")
 print_matrix(m0)
